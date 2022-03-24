@@ -1,0 +1,334 @@
+@charset "UTF-8";
+
+/* Utility Class */
+
+.hidden {
+   display: none;
+}
+
+/* General rules - scales images, videos to size of container */
+img, embed, object, video {
+   max-width: 100%;
+}
+
+
+/* switch box model */
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+/* Fix for scaling of images IE */
+img {
+   -ms-interpolation-mode: bicubic;
+}
+
+/* basic reset */
+/* browsers have built in values for elements so we'll reset a few things to zero */
+
+div, p, body, header, footer, section, nav {
+   margin: 0;
+   padding: 0;
+}
+
+img {
+   border: none;
+   margin: 0;
+   padding: 0;
+}
+
+/* END Basic Reset */
+
+
+/*** STYLESHEET ***/
+
+/* html selectors */
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 18px;
+   color: #fff;
+}
+
+a:link, a:visited {
+   text-decoration: none;
+   color: #313131;
+}
+
+a:hover, a:active {
+   text-decoration: none;
+   color: #666;
+}
+
+.hidden {
+   display: none;
+}
+
+
+/* Container */
+
+.container {
+   margin: 0 auto;
+   max-width: 100%;
+}
+
+
+/* Header */
+
+#mainHeader {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   align-items: center;
+   margin: 20px 180px 20px 180px;
+}
+
+#logo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-width: 150px;
+   height: 90px;
+   background-color: #333;
+}
+
+#mainNav {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 700px;
+   min-width: 150px;
+   height: 90px;;
+   margin: 5px 0 0 0;
+   background-color: #333;
+}
+
+
+/* Burger Menu */
+
+/* Want to push burger menu to right, set to flex */
+
+#mainNav button {
+	background: url(../images/burger.svg) center no-repeat;
+	width: 20px;
+	height: 20px;
+	border: 0;
+	transition: all 400ms ease;
+	margin: 0 auto;
+}
+
+#mainNav button.expanded {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+#mainNav li a {
+	display: block;
+	padding: 10px 0 10px 0;
+	color: #8ea76d;
+	text-align: center;
+}
+
+#mainNav li {
+	border-bottom: 1px solid #efefef;
+}
+
+#mainNav li:first-child {
+	border-top: 1px solid #efefef;
+}
+
+#mainNav li:last-child {
+	margin-bottom: 10px;
+}
+
+#burgerCon {
+	margin-top: 0px;
+	display: none;
+}
+
+#burgerCon.slideToggle {
+	display: block;
+}
+
+#searchForm {
+	margin-top: 20px;
+}
+
+#mainNav input[type=text] {
+	display: block;
+	width: 100%;
+	height: 40px;
+	padding: 5px;
+	border: 1px solid #cacaca;
+	border-radius: 3px 0 0 3px;
+	background-color: #fefefe;
+	box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+	color: #0a0a0a;
+}
+
+#mainNav input[type=submit] {
+	height: 40px;
+	width: 100px;
+	border: 0;
+	border-radius: 0 3px 3px 0;
+	text-align: center;
+	font-size: 14px;
+	background-color: #8fa771;
+	color: #fefefe;
+}
+
+#searchCon {
+	display: flex;
+	flex-direction: row;
+}
+
+/* End Burger Menu */
+
+/* End Header */
+
+
+/* Hero Image */
+
+#heroImage {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #333;
+   width: 100%;
+   height: 500px;
+   color: #fff;
+}
+
+/* End Hero Image */
+
+
+/* Brand Features */
+
+#brandFeatures {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 100%;
+   margin: 40px 0 0 10px;
+}
+
+.brandFeatures-1 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: #333;
+   width: 300px;
+   height: 350px;
+   margin: 0 20px 20px 0;
+}
+
+.brandLogo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   background-color: #333;
+   width: 450px;
+   height: 350px;
+   margin: 0 20px 20px 0;
+}
+
+.brandFeatures-2 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   background-color: #333;
+   width: 300px;
+   height: 350px;
+   margin: 0 20px 20px 0;
+}
+
+/* End Brand Features */
+
+
+/* Process */
+
+#process {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
+.processText {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: #333;
+   width: 350px;
+   height: 350px;
+   margin: 20px 20px 20px 0;
+}
+
+.processImage {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: #333;
+   width: 690px;
+   height: 350px;
+   margin: 20px 0px 20px 0px;
+}
+
+/* End Proces */
+
+
+/* Product */
+
+#product {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 100%;
+   min-width: auto;
+   margin: 20px 0 0 10px;
+}
+
+.productType {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   background-color: #333;
+   width: 280px;
+   height: 300px;
+   margin: 0 20px 20px 0;
+}
+
+/* End Product */
+
+
+/* Footer */
+
+#mainFooter {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #333;
+   width: 100%;
+   height: 250px;
+   margin-top: 40px;
+}
