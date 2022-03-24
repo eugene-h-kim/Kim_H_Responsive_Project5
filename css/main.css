@@ -44,12 +44,15 @@ img {
 
 /* END Basic Reset */
 
+
+/*** STYLESHEET ***/
+
 /* html selectors */
 
 body {
    font-family: Arial, Helvetica, sans-serif;
    font-size: 18px;
-   color: #333;
+   color: #fff;
 }
 
 a:link, a:visited {
@@ -67,51 +70,127 @@ a:hover, a:active {
 }
 
 
-/* Site Container */
-/* This is essentially a box that we place the whole site in.
-We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screen. */
+/* Container */
 
-#siteContainer {
+.container {
    margin: 0 auto;
-   width: 1366px;
+   max-width: 100%;
 }
+
 
 /* Header */
 
 #mainHeader {
-   margin-top: 20px;
-   margin-left: 180px;
-   margin-right: 180px;
-   padding-bottom: 20px;
-   overflow: hidden;
-   /* border-bottom: solid 1px #ddd; */
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   align-items: center;
+   margin: 20px 180px 20px 180px;
 }
 
 #logo {
-   width: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-width: 150px;
    height: 90px;
-   background-color: #000;
-   float: left;
-}
-
-#logo p {
-   text-align: center;
-   padding: 35px;
-   color: #fff;
+   background-color: #333;
 }
 
 #mainNav {
-   width: 780px;
-   height: 90px;
-   background-color: #000;
-   float: right;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 700px;
+   min-width: 150px;
+   height: 90px;;
+   margin: 5px 0 0 0;
+   background-color: #333;
 }
 
-#mainNav p {
-   color: #fff;
-   text-align: center;
-   padding: 35px;
+
+/* Burger Menu */
+
+/* Want to push burger menu to right, set to flex */
+
+#mainNav button {
+	background: url(../images/burger.svg) center no-repeat;
+	width: 20px;
+	height: 20px;
+	border: 0;
+	transition: all 400ms ease;
+	margin: 0 auto;
 }
+
+#mainNav button.expanded {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+#mainNav li a {
+	display: block;
+	padding: 10px 0 10px 0;
+	color: #8ea76d;
+	text-align: center;
+}
+
+#mainNav li {
+	border-bottom: 1px solid #efefef;
+}
+
+#mainNav li:first-child {
+	border-top: 1px solid #efefef;
+}
+
+#mainNav li:last-child {
+	margin-bottom: 10px;
+}
+
+#burgerCon {
+	margin-top: 0px;
+	display: none;
+}
+
+#burgerCon.slideToggle {
+	display: block;
+}
+
+#searchForm {
+	margin-top: 20px;
+}
+
+#mainNav input[type=text] {
+	display: block;
+	width: 100%;
+	height: 40px;
+	padding: 5px;
+	border: 1px solid #cacaca;
+	border-radius: 3px 0 0 3px;
+	background-color: #fefefe;
+	box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+	color: #0a0a0a;
+}
+
+#mainNav input[type=submit] {
+	height: 40px;
+	width: 100px;
+	border: 0;
+	border-radius: 0 3px 3px 0;
+	text-align: center;
+	font-size: 14px;
+	background-color: #8fa771;
+	color: #fefefe;
+}
+
+#searchCon {
+	display: flex;
+	flex-direction: row;
+}
+
+/* End Burger Menu */
 
 /* End Header */
 
@@ -122,10 +201,10 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: #000;
-   height: 600px;
+   background-color: #333;
+   width: 100%;
+   height: 500px;
    color: #fff;
-   margin-bottom: 80px;
 }
 
 /* End Hero Image */
@@ -135,111 +214,111 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 
 #brandFeatures {
    display: flex;
-   justify-content: space-between;
-   margin-bottom: 80px;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 100%;
+   margin: 40px 0 0 10px;
 }
 
 .brandFeatures-1 {
-   background-color: #000;
-   width: 480px;
-   height: 400px;
-   margin-left: 180px;
-}
-
-.brandFeatures-1 p {
-   color: #fff;
-   text-align: center;
-   line-height: 22em;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: #333;
+   width: 300px;
+   height: 350px;
+   margin: 0 20px 20px 0;
 }
 
 .brandLogo {
-   background-color: #000;
-   width: 480px;
-   height: 400px;
-}
-
-.brandLogo p {
-   color: #fff;
-   text-align: center;
-   line-height: 22em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   background-color: #333;
+   width: 450px;
+   height: 350px;
+   margin: 0 20px 20px 0;
 }
 
 .brandFeatures-2 {
-   background-color: #000;
-   width: 480px;
-   height: 400px;
-   margin-right: 180px;
-}
-
-.brandFeatures-2 p {
-   color: #fff;
-   text-align: center;
-   line-height: 22em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   background-color: #333;
+   width: 300px;
+   height: 350px;
+   margin: 0 20px 20px 0;
 }
 
 /* End Brand Features */
 
 
-/* Process & Product */
-
 /* Process */
 
 #process {
    display: flex;
-   justify-content: space-between;
-   padding: 80px 0px;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 100%;
 }
 
 .processText {
-   background-color: #000;
-   width: 680px;
-   height: 510px;
-   margin-left: 180px;
-}
-
-.processText p {
-   color: #fff;
-   text-align: center;
-   line-height: 30em;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: #333;
+   width: 350px;
+   height: 350px;
+   margin: 20px 20px 20px 0;
 }
 
 .processImage {
-   background-color: #000;
-   width: 680px;
-   height: 510px;
-   margin-right: 180px;
-
-}
-
-.processImage p {
-   color: #fff;
-   text-align: center;
-   line-height: 30em;
-}
-
-/* End Process */
-
-/* Product Type */
-
-#productType {
    display: flex;
-   justify-content: space-between;
-   margin: 0px 180px 80px;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: #333;
+   width: 690px;
+   height: 350px;
+   margin: 20px 0px 20px 0px;
+}
+
+/* End Proces */
+
+
+/* Product */
+
+#product {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 100%;
+   min-width: auto;
+   margin: 20px 0 0 10px;
 }
 
 .productType {
-   background-color: #000;
-   width: 375px;
-   height: 380px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   background-color: #333;
+   width: 280px;
+   height: 300px;
+   margin: 0 20px 20px 0;
 }
 
-.productType p {
-   color: #fff;
-   text-align: center;
-   line-height: 22em;
-}
-
-/* End Product Type */
+/* End Product */
 
 
 /* Footer */
@@ -248,13 +327,8 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: #000;
+   background-color: #333;
+   width: 100%;
    height: 250px;
+   margin-top: 40px;
 }
-
-#mainFooter p {
-   color: #fff;
-}
-
-
-/* End Footer */

@@ -11,76 +11,97 @@
 </head>
 
 <body>
-   <div id="siteContainer">
+   <div class="container">
       <h1 class="hidden">Lysol Beer Website</h1>
+
       <header id="mainHeader">
          <h2 class="hidden">Header</h2>
          
-         <nav id="mainNav">
-            <h3 class="hidden">Main Nav</h3>
-            <p>Nav</p>
-         </nav> <!-- end mainNav -->
-
          <div id="logo">
             <h3 class="hidden">Logo</h3>
             <p>Logo</p>
          </div> <!-- end logo -->
 
+         <nav id="mainNav">
+            <h3 class="hidden">Main Nav</h3>
+            <p>Nav</p>
+
+            <button id="button"></button>
+				<div id="burgerCon">
+					<ul id="burgerMenu">
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">ABOUT</a></li>
+						<li><a href="#">PRODUCT</a></li>
+						<li><a href="#">GALLERY</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
+
+               <form id="searchForm" action="search.php" method="get">
+						<div id="searchCon">
+							<input type="text">
+							<input type="submit" value="search">
+						</div>
+					</form>
+            </div>
+
+         </nav> <!-- end mainNav -->
+
       </header> <!-- end mainHeader -->
-   </div> <!-- end siteContainer -->
+   </div> <!-- end Container -->
+
 
    <main class="container">
+
       <section id="heroImage">
-      <h2 class="hidden">Hero Image</h2>
-      <!-- <img class="hidden" id="heroImage" src="#" alt="hero image"> -->
-      <p>Hero Image</p>
+         <h2 class="hidden">Hero Image</h2>
+         <!-- <img class="hidden" id="heroImage" src="#" alt="hero image"> -->
+         <p>Hero Image</p>
       </section> <!-- end heroImage -->
 
+
       <section id="brandFeatures">
-      <h2 class="hidden">Brand</h2>
+         <h2 class="hidden">Brand</h2>
 
-      <section class="brandFeatures-1">
-      <h3 class="hidden">Brand Features #1</h3>
-         <p>Brand Features #1</p>
-      </section> <!-- end brandFeatures#1 -->
+         <section class="brandFeatures-1">
+            <h3 class="hidden">Brand Features #1</h3>
+            <p>Brand Features #1</p>
+         </section> <!-- end brandFeatures#1 -->
 
-      <section class="brandLogo">
-      <h3 class="hidden">Brand Logo</h3>
-         <p>Brand Logo</p>
-      </section> <!-- end brandLogo -->
+         <section class="brandLogo">
+            <h3 class="hidden">Brand Logo</h3>
+            <p>Brand Logo</p>
+         </section> <!-- end brandLogo -->
 
-      <section class="brandFeatures-2">
-         <h3 class="hidden">Brand Features #2</h3>
-         <p>Brand Features #2</p>
-      </section> <!-- end brandFeatures#2 -->
+         <section class="brandFeatures-2">
+            <h3 class="hidden">Brand Features #2</h3>
+            <p>Brand Features #2</p>
+         </section> <!-- end brandFeatures#2 -->
 
       </section> <!-- end brandFeatures -->
 
-      <section id="processProduct">
-      <h2 class="hidden">Process & Product Type</h2>
-      <div id="process">
-      <h3 class="hidden">Process</h3>
-         <div class="processText"><p>Process Text</p></div>
-         <div class="processImage"><p>Process Image</p></div>
-      </div> <!-- end process -->
 
-      <div id="productType">
-      <h3 class="hidden">Product Types</h3>
-         <div class="productType"><p>Product #1</p></div> <!-- end productType1 -->
-         <div class="productType"><p>Product #2</p></div> <!-- end productType2 -->
-         <div class="productType"><p>Product #3</p></div> <!-- end productType3 -->
-         <div class="productType"><p>Product #4</p></div> <!-- end productType4 -->
-      </div> <!-- end productType -->
-      </section> <!-- end processProduct -->
+      <section id="process">
+         <h2 class="hidden">Process</h2>
+            <div class="processText"><p>Process Text</p></div>
+            <div class="processImage"><p>Process Image</p></div>
+      </section> <!-- end process -->
+
+      <section id="product">
+         <h2 class="hidden">Product Types</h2>
+            <div class="productType"><p>Product #1</p></div> <!-- end productType1 -->
+            <div class="productType"><p>Product #2</p></div> <!-- end productType2 -->
+            <div class="productType"><p>Product #3</p></div> <!-- end productType3 -->
+            <div class="productType"><p>Product #4</p></div> <!-- end productType4 -->
+      </section> <!-- end product -->
+
    </main>
 
    <footer id="mainFooter">
-      <h2 class="hidden">Footer</h2>
-      <p>Footer Nav &amp; Copyright</p>
+      <div class="container">
+         <h2 class="hidden">Footer</h2>
+         <p>Footer Nav &amp; Copyright</p>
+      </div>
    </footer> <!-- end mainFooter -->
-
-
-
 
 <script src="js/main.js"></script>
 </body>
